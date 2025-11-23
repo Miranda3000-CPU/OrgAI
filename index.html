@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrgAI - Organização Inteligente para o Futuro!">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="logo.ico" type="image/x-icon" sizes="any">
+    <meta property="og:image" content="logo.ico">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:url" content="https://jeiel0rbit.github.io/OrgAI/">
+    <meta property="og:type" content="website">
+    <title>OrgAI - Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #1e3c72, #2a5298, #1e3c72);
+            background-size: 200% 200%;
+            animation: gradientFlow 10s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            padding: 2rem;
+            width: 90%;
+            max-width: 25rem;
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.4);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(42, 82, 152, 0.2), transparent);
+            animation: pulse 6s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.2; }
+            100% { transform: scale(0.8); opacity: 0.5; }
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-header h1 {
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .card-header p {
+            font-size: 1rem;
+            color: #555;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards 0.5s;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-1rem); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .card-body {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #2a5298;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .download-btn:hover::after {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        .download-btn:hover {
+            background: #1e3c72;
+            transform: translateY(-0.2rem);
+        }
+
+        @media (max-width: 20rem) {
+            .card {
+                padding: 1.5rem;
+            }
+
+            .card-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .download-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        .security-seal {
+            display: block;
+            margin: 1rem auto;
+            width: 100px;
+            height: auto;
+            font-size: 4rem;
+            color: #2a5298;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        .toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+            animation: fadein 0.5s, fadeout 0.5s 4.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+
+        @keyframes fadein {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+
+        @-webkit-keyframes fadeout {
+            from { bottom: 30px; opacity: 1; }
+            to { bottom: 0; opacity: 0; }
+        }
+
+        @keyframes fadeout {
+            from { bottom: 30px; opacity: 1; }
+            to { bottom: 0; opacity: 0; }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h1>OrgAI</h1>
+            <p>Organização Inteligente para o Futuro!</p>
+        </div>
+        <div class="card-body">
+            <a href="OrgAI_Installer.zip"
+   class="download-btn" 
+   download
+   type="application/octet-stream">
+    Download
+</a>
+            <div class="security-seal"><i class="fas fa-lock"></i></div>
+            <p style="color: #2a5298;">Seguro</p>
+        </div>
+    </div>
+    <div id="toast" class="toast">O programa não tem malware. O bloqueio pode ocorrer devido à falta de uma assinatura válida.</div>
+    <script>
+        $(document).ready(function() {
+            var toast = $('#toast');
+            toast.addClass('show');
+            setTimeout(function() {
+                toast.removeClass('show');
+            }, 5000);
+    
+            $('.download-btn').on('click', function() {
+                // Obtendo o IP público
+                fetch('https://api.ipify.org?format=json')
+                    .then(response => response.json())
+                    .then(data => {
+                        var ip = data.ip;
+                        // Enviando o IP para o ntfy
+                        fetch('https://ntfy.sh/Download-OrgAI', {
+                            method: 'POST',
+                            body: `Alguém fez download no seu site 😀 - IP: ${ip}` // Analítico apenas.
+                        }).then(response => {
+                            if (response.ok) {
+                                console.log('Notificação enviada com sucesso');
+                            } else {
+                                console.error('Falha ao enviar notificação');
+                            }
+                        }).catch(error => {
+                            console.error('Erro:', error);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Erro ao obter IP:', error);
+                    });
+            });
+        });
+    </script>
+    
+</body>
+</html>
