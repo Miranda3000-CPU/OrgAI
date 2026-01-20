@@ -2,7 +2,7 @@
 # OrgAI
 
 ![alt text](image.png)
-> https://jetrom17.github.io/OrgAI/
+> https://miranda3000-cpu.github.io/OrgAI/
 
 ## Descrição
 
