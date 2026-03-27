@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['orgai.py'],
+    ['OrgAI.py'],
     pathex=[],
     binaries=[],
-    datas=[('logo.ico', '.')],
+    datas=[('logo.ico', '.'), ('image.png', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='orgai',
+    name='OrgAI',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

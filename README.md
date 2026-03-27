@@ -1,27 +1,36 @@
-<!-- filepath: /c:/Users/Pichau/Desktop/organize.AI/README.md -->
 # OrgAI
 
-![alt text](image.png)
-> https://jetrom17.github.io/OrgAI/
+![OrgAI](image.png)
 
-## Descrição
+Aplicativo desktop em PyQt6 para organizar arquivos por extensao, com assistente de IA local para analise de destino antes da movimentacao.
 
-OrgAI é um aplicativo que organiza os arquivos de uma pasta com base na extensão dos mesmos. Se você tem vários arquivos na pasta de Downloads, experimente usar este programa para organizar cada arquivo para dentro de sua pasta corresponde ao tipo de arquivo.
+## Novidades da versao 2.0
+
+- Interface moderna inspirada em componentes Bootstrap.
+- Correcao de icone no app (janela + barra do Windows + build).
+- IA local para sugerir e explicar a organizacao por extensao.
+- Tratamento de erros simplificado para usuarios leigos.
+- Remocao de trechos redundantes no codigo e na pagina de download.
 
 ## Requisitos
 
-- Python 3.11 ou superior  
-- As dependências estão listadas no arquivo [requirements.txt](./requirements.txt)
+- Python 3.11+
+- Dependencias em `requirements.txt`
 
-## Instalação
+## Execucao local
 
-1. Clone o repositório ou baixe os arquivos.
-2. (Opcional) Crie e ative um ambiente virtual:
-   ```bash
-   # Windows 10/11
-   python -m venv venv
-   venv\Scripts\activate
-   pip install -r requirements.txt
-   python OrgAI.py
-   pyinstaller --onefile --windowed --icon=logo.ico --add-data "logo.ico;." orgai.py
-   ```
+```bash
+pip install -r requirements.txt
+python OrgAI.py
+```
+
+## Build com PyInstaller
+
+```bash
+pyinstaller --onefile --windowed --icon=logo.ico --add-data "logo.ico;." --add-data "image.png;." OrgAI.py
+```
+
+## Instalador (Inno Setup)
+
+1. Gere o executavel em `dist/OrgAI.exe`.
+2. Compile `OrgAI.iss` no Inno Setup.

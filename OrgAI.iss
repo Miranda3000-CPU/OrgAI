@@ -1,7 +1,7 @@
-; Script de Inno Setup para criar um instalador .msi
+; Script de Inno Setup para criar instalador do OrgAI
 [Setup]
 AppName=OrgAI
-AppVersion=1.0
+AppVersion=2.0
 DefaultDirName={pf}\OrgAI
 DefaultGroupName=OrgAI
 OutputDir=.
