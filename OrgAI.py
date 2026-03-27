@@ -32,7 +32,7 @@ from PyQt6.QtWidgets import (
 APP_TITLE = "OrgAI"
 APP_VERSION = "2.0"
 APP_ID = "br.orgai.desktop"
-APP_COPYRIGHT = '© 2026, Jeiel Lima Miranda. Todos os direitos reservados.<br><br><a href="https://jeielmiranda.is-a.dev/OrgAI/">Visitar Website</a>'
+APP_COPYRIGHT = '© 2026, Jeiel Lima Miranda. Todos os direitos reservados.<br><br><a href="https://miranda3000-cpu.github.io/OrgAI/">Visitar Website</a>'
 BUTTON_HEIGHT = 42
 
 
