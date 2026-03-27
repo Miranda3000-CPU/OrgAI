@@ -1,6 +1,8 @@
 # OrgAI
 
-![OrgAI](image.png)
+|  LEGADO | V2 |
+| :---: | :---: |
+| ![OrgAI](image.png) | ![OrgAI](imagev2.png) |
 
 Aplicativo desktop em PyQt6 para organizar arquivos por extensao, com assistente de IA local para analise de destino antes da movimentacao.
 
